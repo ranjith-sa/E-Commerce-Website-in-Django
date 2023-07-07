@@ -9,6 +9,6 @@ framework Django.
 
 
 
-                                                      🙂 🙏 Thanks For Watching 🙂 🙏
+                                       🙂 🙏 Thanks For Watching 🙂 🙏
 
  
