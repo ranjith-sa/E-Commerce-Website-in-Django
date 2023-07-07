@@ -1,0 +1,39 @@
+{% extends 'shop/layouts/main.html' %} 
+
+{% block title %}
+    Collection | Shopkart
+{% endblock title %}
+
+{% block content %}
+
+
+<section class="bg-light py-4 my-5" style="margin-top:70px; min-height: 600px" >
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="mb-3">Categories</h4>
+                <hr style="border-color: #f00c0c;">
+                {% include 'shop/inc/message.html' %}
+            </div>
+            
+            {% for item in catagory %}
+            <div class="col-md-4 col-lg-3">
+                <div class="card my-3" >
+                    <a href="{% url 'collections' item.name %}">
+                    
+                    <center><img src="{{item.image.url}}" class="card-image-top" alt="Catagories" height="200px" width="260px"></center>
+                   
+                    <div class="card-body">
+                        <center><h5 class="card-title text-success">{{ item.name }}</h5></center>
+                        <center><p class="card-text">{{ item.description }}</p></center>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+ 
+{% endblock content %}
